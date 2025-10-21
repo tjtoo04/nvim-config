@@ -1,14 +1,15 @@
 return {
   "stevearc/conform.nvim",
   opts = {
-    lsp_format = "never",
+    lsp_format = "fallback",
+    prefer_local = "node_modules/.bin",
     formatters_by_ft = {
       javascript = { "biome" },
       javascriptreact = { "biome" },
       typescript = { "biome" },
       typescriptreact = { "biome" },
-      vue = { "prettier" }, -- handles <template>, <script>, <style>
-      html = { "prettier" }, -- just in case you edit standalone HTML files
+      vue = { "prettier" },
+      html = { "prettier" },
       css = { "prettier" },
       scss = { "prettier" },
       json = { "prettier" },
